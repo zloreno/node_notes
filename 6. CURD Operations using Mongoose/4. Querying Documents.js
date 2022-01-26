@@ -28,19 +28,21 @@ async function getCourse() {
 	const specificCourses = await Course.find({
 		author: 'Mosh',
 		isPublished: true,
-	})
-		//.limit(10)
-		//when sorting, 1 = ascending, -1 = descending
-		.sort({ name: 1 })
-        // OR
-        .sort('name')
-        //OR (price in descending order)
-        .sort('-price')
-		// which attributes you want to show
-        // either as object as shown
-		.select({ name: 1, tags: 1 });
-        // or
-        .select('name tags')
+	});
+	//.limit(10)
+
+	//when sorting, 1 = ascending, -1 = descending
+	//.sort({ name: 1 })
+	// OR
+	//.sort('name')
+	//OR (price in descending order)
+	//.sort('-price')
+
+	// which attributes you want to show
+	// either as object as shown
+	//.select({ name: 1, tags: 1 });
+	// or
+	//.select('name tags')
 
 	console.log(specificCourses);
 }
